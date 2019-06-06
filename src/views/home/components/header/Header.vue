@@ -24,8 +24,6 @@ export default {
 
   methods: {
   searchByTerm() {
-      console.log('emitiu...');
-      console.log(this.searchTerm);
       this.$emit('searchByTerm', this.searchTerm);
     }
   }

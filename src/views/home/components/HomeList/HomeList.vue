@@ -62,7 +62,6 @@ export default {
           "https://raw.githubusercontent.com/deblynprado/frontend-test/master/instructions/data.json"
         )
         .then(response => {
-          console.log(response.data);
           this.listPosts = response.data;
         });
     }
