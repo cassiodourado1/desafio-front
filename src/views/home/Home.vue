@@ -3,6 +3,14 @@
     <Header @searchByTerm="searchByTerm"/>
 
     <div class="home__container">
+      <div class="home__filter-bar">
+        <div class="home__filter-bar__title">Filtrar por</div>
+        <ul class="home__filter-bar__menu">
+          <li class="home__filter-bar__menu__item">
+            <a class="home__filter-bar__menu__item-link">Autor</a>
+          </li>
+        </ul>
+      </div>
       <home-list v-if="!term && links" :dataList="links"></home-list>
       <home-list v-if="term && resultList.length > 0" :dataList="resultList"></home-list>
       <p
