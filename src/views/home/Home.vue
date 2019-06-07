@@ -7,12 +7,18 @@
         <div class="home__filter-bar__title">Filtrar por</div>
         <ul class="home__filter-bar__menu">
           <li class="home__filter-bar__menu__item">
-            <a class="home__filter-bar__menu__item-link">Autor</a>
+            <a class="home__filter-bar__menu__item-link" @click="sortedItems('author')">Autor</a>
+          </li>
+          <li class="home__filter-bar__menu__item">
+            <a class="home__filter-bar__menu__item-link" @click="sortedItems('category')">Categoria</a>
+          </li>
+          <li class="home__filter-bar__menu__item">
+            <a class="home__filter-bar__menu__item-link" @click="sortedItems('title')">Título</a>
           </li>
         </ul>
       </div>
-      <home-list v-if="!term && links" :dataList="links"></home-list>
-      <home-list v-if="term && resultList.length > 0" :dataList="resultList"></home-list>
+      <home-list @sortedItems="sortedItems" v-if="!term && links" :dataList="links"></home-list>
+      <home-list @sortedItems="sortedItems" v-if="term && resultList.length > 0" :dataList="resultList"></home-list>
       <p
         v-if="term && resultList.length == 0"
         class="home__no-results"
@@ -43,7 +49,8 @@ export default {
   data() {
     return {
       baseUrl: process.env.VUE_APP_BASE_URL,
-      term: "",
+      term: '',
+      filterParam:'',
       resultList: [],
       links: [
         {
@@ -130,6 +137,10 @@ export default {
   },
 
   methods: {
+    sortedItems(sortParam) {
+      this.filterParam = sortParam;
+    },
+
     searchByTerm(searchTerm) {
       this.term = searchTerm;
 

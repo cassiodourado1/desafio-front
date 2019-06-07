@@ -42,6 +42,7 @@ export default {
   data() {
     return {
       listPosts: [],
+      param: '',
     };
   },
 
@@ -49,12 +50,8 @@ export default {
     this.getData();
   },
 
+
   methods: {
-    secundecondsToMinutes() {
-
-
-
-    },
 
     getData() {
       axios
