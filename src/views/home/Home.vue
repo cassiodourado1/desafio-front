@@ -4,10 +4,13 @@
 
     <div class="home__container">
       <div class="home__filter-bar">
-        <div class="home__filter-bar__title">Filtrar por</div>
+        <div class="home__filter-bar__title">Ordenar por</div>
         <ul class="home__filter-bar__menu">
           <li class="home__filter-bar__menu__item">
-            <a class="home__filter-bar__menu__item-link" @click="sortedItems('author')">Autor</a>
+            <a 
+              class="home__filter-bar__menu__item-link" 
+              @click="sortedItems('author')"
+            >Autor</a>
           </li>
           <li class="home__filter-bar__menu__item">
             <a class="home__filter-bar__menu__item-link" @click="sortedItems('category')">Categoria</a>
@@ -33,7 +36,7 @@ import Header from "./components/header/Header";
 import HomeList from "./components/HomeList/HomeList";
 
 export default {
-  name: "Home",
+  name: 'Home',
 
   components: {
     Header,
@@ -55,56 +58,56 @@ export default {
       links: [
         {
           meta: {
-            author: "Danil Ishutin",
+            author: 'Danil Ishutin',
             title:
-              "Font Size Idea: px at Root, rem for Components, em for Text Elements",
-            url: "css-tricks.com"
+              'Font Size Idea: px at Root, rem for Components, em for Text Elements',
+            url: 'css-tricks.com'
           },
-          category: "ux_ui",
+          category: 'ux_ui',
           comments: 7,
           created_at: 1459857600,
           upvotes: 9
         },
         {
           meta: {
-            author: "Christopher Alesund",
-            title: "Case study: Redesigning the Folyo landing page",
-            url: "medium.com"
+            author: 'Christopher Alesund',
+            title: 'Case study: Redesigning the Folyo landing page',
+            url: 'medium.com'
           },
-          category: "case_study",
+          category: 'case_study',
           comments: 0,
           created_at: 1460289600,
           upvotes: 2
         },
         {
           meta: {
-            author: "Olof Kajbjer",
-            title: "Want people to use your product? Use it yourself",
-            url: "medium.com"
+            author: 'Olof Kajbjer',
+            title: 'Want people to use your product? Use it yourself',
+            url: 'medium.com'
           },
-          category: "product_design",
+          category: 'product_design',
           comments: 4,
           created_at: 1460030400,
           upvotes: 11
         },
         {
           meta: {
-            author: "Mikael Greif",
-            title: "What do you do with a failed project?",
-            url: "mika.el"
+            author: 'Mikael Greif',
+            title: 'What do you do with a failed project?',
+            url: 'mika.el'
           },
-          category: "discussion",
+          category: 'discussion',
           comments: 2,
           created_at: 1460203200,
           upvotes: 4
         },
         {
           meta: {
-            author: "Kenny Schrub",
-            title: "Some things cant be prototyped",
-            url: "mika.el"
+            author: 'Kenny Schrub',
+            title: 'Some things cant be prototyped',
+            url: 'mika.el'
           },
-          category: "discussion",
+          category: 'discussion',
           comments: 25,
           created_at: 1460203200,
           isOwner: true,
@@ -112,11 +115,11 @@ export default {
         },
         {
           meta: {
-            author: "Pasha Biceps",
-            title: "Dont let bad process or structure kill great interfaces",
-            url: "medium.com"
+            author: 'Pasha Biceps',
+            title: 'Dont let bad process or structure kill great interfaces',
+            url: 'medium.com'
           },
-          category: "product_design",
+          category: 'product_design',
           comments: 0,
           created_at: 1460376000,
           isOwner: true,
@@ -124,11 +127,11 @@ export default {
         },
         {
           meta: {
-            author: "Jacky Mao",
-            title: "How to prototype without any tools",
-            url: "jackymao.wix"
+            author: 'Jacky Mao',
+            title: 'How to prototype without any tools',
+            url: 'jackymao.wix'
           },
-          caegory: "product_design",
+          caegory: 'product_design',
           coments: 0,
           upvotes: 1
         }

@@ -10,12 +10,12 @@
         <h2 class="home-list__box-info__title">{{item.meta.title}}</h2>
         <div class="home-list__box-info__bar">
           <div
-            v-if="item.category" 
+            v-if="item.category"
             :class="[`badge badge-${item.category}`]">
             {{item.category}}
           </div>
           <div class="home-list__box-info__bar__box-user">
-            <img src="https://via.placeholder.com/30" class="box-user__image" />
+            <img src="https://via.placeholder.com/30" class="box-user__image"/>
             <h4 class="box-user__name">{{item.meta.author}}</h4>
           </div>
           <div class="home-list__box-info__bar-time"> minutes</div>
@@ -33,11 +33,11 @@
 import axios from "axios";
 import moment from 'moment'
 export default {
-  name: "HomeList",
+  name: 'HomeList',
 
-    props: {
-      dataList: { type: Array, default: () => [] },
-    },
+  props: {
+    dataList: { type: Array, default: () => [] },
+  },
 
   data() {
     return {

@@ -3,7 +3,12 @@
     <div class="header__container">
         <img src="https://via.placeholder.com/50" class="header__logo">
         <div class="header__search">
-          <input placeholder="Buscar" type="search" v-model="searchTerm" class="header__search-input" />
+          <input 
+            placeholder="Buscar" 
+            type="search" 
+            v-model="searchTerm" 
+            class="header__search-input"
+          />
           <button class="header__bar-icon" @click="searchByTerm">pesquisar</button>
         </div>
         <div class="header__search-bar"></div>
